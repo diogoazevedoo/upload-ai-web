@@ -17,7 +17,11 @@ const statusMessages = {
   success: 'Success!'
 }
 
-export function VideoInputForm() {
+interface VideoInputFormProps {
+    onVideoUploaded: (videoId: string) => void
+}
+
+export function VideoInputForm(props: VideoInputFormProps) {
     const [videoFile, setVideoFile] = useState<File | null>(null)
     const [status, setStatus] = useState<Status>('waiting')
 
@@ -56,8 +60,8 @@ export function VideoInputForm() {
 
         const data = await ffmpeg.readFile('output.mp3')
 
-        const audioFileBlob = new Blob([data], { type: 'audio/mpeg' })
-        const audioFile = new File([audioFileBlob], 'audio.mp3', { type: 'audio/mpeg' })
+        const audioFileBlob = new Blob([data], { type: 'audio/mp3' })
+        const audioFile = new File([audioFileBlob], 'output.mp3', { type: 'audio/mpeg' })
 
         return audioFile
     }
@@ -90,6 +94,8 @@ export function VideoInputForm() {
         })
 
         setStatus('success')
+
+        props.onVideoUploaded(videoId)
     }
 
     const previewURL = useMemo(() => {
