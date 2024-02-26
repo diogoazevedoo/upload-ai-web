@@ -2,6 +2,9 @@
 
 Hey there! Glad you stumbled upon my little project. It's a cozy corner of the web where I'm mixing my love for videos with a sprinkle of AI magic. Think of it as your go-to spot for giving your videos not just a voice, but also a brain!
 
+![upload_ai](https://github.com/diogoazevedoo/upload-ai-web/assets/88426589/95c6c62a-fc94-42fd-828c-3e716fecb711)
+
+
 ## What's Cooking?
 
 Here's the deal: you've got videos, and sometimes you just want more from them. That's where my app waltzes in. It's a chill place where you can:
