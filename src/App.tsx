@@ -43,7 +43,7 @@ export function App() {
           <Separator orientation="vertical" className="h-6" />
 
           <Button variant="outline">
-            <Github className="w-4 h-4 mr-2" />
+            <Github href="https://github.com/diogoazevedoo/upload-ai-web" className="w-4 h-4 mr-2" />
             GitHub
           </Button>
         </div>
